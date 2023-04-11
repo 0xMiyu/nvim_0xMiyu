@@ -70,4 +70,7 @@ return require('packer').startup(function(use)
             require("nvim-tree").setup {}
         end
     }
+    
+    --harpoon 
+    use('theprimeagen/harpoon')
 end)
