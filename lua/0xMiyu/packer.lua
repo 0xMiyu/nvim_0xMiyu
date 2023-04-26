@@ -73,4 +73,7 @@ return require('packer').startup(function(use)
     
     --harpoon 
     use('theprimeagen/harpoon')
+    
+    --nvim tmux navigator
+    use { "alexghergh/nvim-tmux-navigation" }
 end)
