@@ -22,7 +22,3 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 --replace all instances under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-vim.keymap.set('n', "<A-h>", ":NvimTmuxNavigateLeft<CR>")
-vim.keymap.set('n', "<A-l>", ":NvimTmuxNavigateRight<CR>")
-vim.keymap.set('n', "<A-j>", ":NvimTmuxNavigateDown<CR>")
-vim.keymap.set('n', "<A-k>", ":NvimTmuxNavigateUp<CR>")
