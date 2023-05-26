@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
    --    end
    --})
    
-    use ('EdenEast/nightfox.nvim')
+    use { "catppuccin/nvim", as = "catppuccin"}
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) 
 
@@ -76,4 +76,9 @@ return require('packer').startup(function(use)
     
     --nvim tmux navigator
     use { "alexghergh/nvim-tmux-navigation" }
+    
+    --barbar (tabline)
+    use ('nvim-tree/nvim-web-devicons') -- OPTIONAL: for file icons
+    use ('lewis6991/gitsigns.nvim') -- OPTIONAL: for git status
+    use ('romgrk/barbar.nvim')
 end)
