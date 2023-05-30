@@ -66,5 +66,6 @@ map('n', '≥', '<Cmd>BufferNext<CR>', opts) --sending '<A-.>'
 -- Re-order to previous/next
 map('n', '…', '<Cmd>BufferMovePrevious<CR>', opts) --sending '<A-:>'
 map('n', 'æ', '<Cmd>BufferMoveNext<CR>', opts) --sending '<A-'>'
-
+-- Close buffer
+map('n', 'ç', '<Cmd>BufferClose<CR>', opts)
 
