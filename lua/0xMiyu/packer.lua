@@ -12,14 +12,6 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-   --use({ 
-   --    'rose-pine/neovim', 
-   --    as = 'rose-pine',
-   --    config = function()
-   --        vim.cmd('colorscheme rose-pine')
-   --    end
-   --})
-   
     use { "catppuccin/nvim", as = "catppuccin"}
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) 
@@ -58,8 +50,13 @@ return require('packer').startup(function(use)
     use('MunifTanjim/prettier.nvim')
 
     --git
-    use('tpope/vim-fugitive')
-    
+    use({
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+    })
     --file explorer
     use {
         'nvim-tree/nvim-tree.lua',

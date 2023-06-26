@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/martin/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/Users/martin/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/martin/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -194,11 +199,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/martin/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/Users/martin/.local/share/nvim/site/pack/packer/start/vim-fugitive",
-    url = "https://github.com/tpope/vim-fugitive"
   }
 }
 
