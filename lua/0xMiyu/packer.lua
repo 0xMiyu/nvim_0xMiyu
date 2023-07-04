@@ -12,7 +12,16 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use { "catppuccin/nvim", as = "catppuccin"}
+
+    -- catppuccin theme
+    -- use { "catppuccin/nvim", as = "catppuccin"}
+    
+    -- everforest theme
+    use ({'neanias/everforest-nvim', as = "everforest", 
+        config = function()
+            require("everforest").setup()
+        end,
+    })
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) 
 
