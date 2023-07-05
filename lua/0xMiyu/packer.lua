@@ -14,14 +14,14 @@ return require('packer').startup(function(use)
 
 
     -- catppuccin theme
-    -- use { "catppuccin/nvim", as = "catppuccin"}
+    use { "catppuccin/nvim", as = "catppuccin"}
     
     -- everforest theme
-    use ({'neanias/everforest-nvim', as = "everforest", 
-        config = function()
-            require("everforest").setup()
-        end,
-    })
+    --use ({'neanias/everforest-nvim', as = "everforest", 
+    --    config = function()
+    --        require("everforest").setup()
+    --    end,
+    --})
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) 
 
