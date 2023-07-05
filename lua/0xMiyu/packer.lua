@@ -17,11 +17,7 @@ return require('packer').startup(function(use)
     -- use { "catppuccin/nvim", as = "catppuccin"}
     
     -- everforest theme
-    use ({'neanias/everforest-nvim', as = "everforest", 
-        config = function()
-            require("everforest").setup()
-        end,
-    })
+    use ({'sainnhe/everforest', as = "everforest"})
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) 
 
