@@ -23,7 +23,7 @@ require'barbar'.setup {
     filetype = {
       -- Sets the icon's highlight group.
       -- If false, will use nvim-web-devicons colors
-      custom_colors = false,
+      custom_colors = true,
 
       -- Requires `nvim-web-devicons` if `true`
       enabled = true,
@@ -36,7 +36,7 @@ require'barbar'.setup {
     pinned = {button = '', filename = true},
 
     -- Use a preconfigured buffer appearance— can be 'default', 'powerline', or 'slanted'
-    preset = 'default',
+    preset = 'powerline',
 
     -- Configure the icons on the bufferline based on the visibility of a buffer.
     -- Supports all the base icon options, plus `modified` and `pinned`.
