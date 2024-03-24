@@ -10,10 +10,10 @@ require'barbar'.setup {
     button = '',
     -- Enables / disables diagnostic symbols
     diagnostics = {
-      [vim.diagnostic.severity.ERROR] = {enabled = false, icon = 'ﬀ'},
+      [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
       [vim.diagnostic.severity.WARN] = {enabled = false},
       [vim.diagnostic.severity.INFO] = {enabled = false},
-      [vim.diagnostic.severity.HINT] = {enabled = false},
+      [vim.diagnostic.severity.HINT] = {enabled = true},
     },
     gitsigns = {
       added = {enabled = true, icon = '+'},
@@ -36,7 +36,7 @@ require'barbar'.setup {
     pinned = {button = '', filename = true},
 
     -- Use a preconfigured buffer appearance— can be 'default', 'powerline', or 'slanted'
-    preset = 'powerline',
+    preset = 'default',
 
     -- Configure the icons on the bufferline based on the visibility of a buffer.
     -- Supports all the base icon options, plus `modified` and `pinned`.

@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/martin/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/martin/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/martin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -93,11 +98,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/martin/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
-  },
-  everforest = {
-    loaded = true,
-    path = "/Users/martin/.local/share/nvim/site/pack/packer/start/everforest",
-    url = "https://github.com/sainnhe/everforest"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
