@@ -14,28 +14,36 @@ return require('packer').startup(function(use)
 
 
     -- catppuccin theme
-    use { "catppuccin/nvim", as = "catppuccin"}
+    -- use { "catppuccin/nvim", as = "catppuccin"}
     
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) 
+    use({
+      "neanias/everforest-nvim",
+      -- Optional; default configuration will be used if setup isn't called.
+      config = function()
+        require("everforest").setup()
+      end,
+    })
+
+    use('nvim-treesitter/nvim-treesitter', {run = ':tsupdate'}) 
 
     use {
-        'VonHeikemen/lsp-zero.nvim',
+        'vonheikemen/lsp-zero.nvim',
         branch = 'v2.x',
         requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
+            -- lsp support
+            {'neovim/nvim-lspconfig'},             -- required
+            {                                      -- optional
             'williamboman/mason.nvim',
             run = function()
-                pcall(vim.cmd, 'MasonUpdate')
+                pcall(vim.cmd, 'masonupdate')
             end,
         },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+        {'williamboman/mason-lspconfig.nvim'}, -- optional
 
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
+        -- autocompletion
+        {'hrsh7th/nvim-cmp'},     -- required
+        {'hrsh7th/cmp-nvim-lsp'}, -- required
+        {'l3mon4d3/luasnip'},     -- required
     }
 }
 
@@ -49,7 +57,7 @@ return require('packer').startup(function(use)
     -- code formatter
     use('neovim/nvim-lspconfig')
     use('jose-elias-alvarez/null-ls.nvim')
-    use('MunifTanjim/prettier.nvim')
+    use('muniftanjim/prettier.nvim')
 
     --git
     use({
