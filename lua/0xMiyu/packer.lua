@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
@@ -20,7 +20,10 @@ return require('packer').startup(function(use)
       "neanias/everforest-nvim",
       -- Optional; default configuration will be used if setup isn't called.
       config = function()
-        require("everforest").setup()
+        require("everforest").setup({
+            background = "medium",
+            transparent_background_level = 1,
+        })
       end,
     })
 
