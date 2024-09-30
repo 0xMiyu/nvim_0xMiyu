@@ -94,4 +94,15 @@ return require('packer').startup(function(use)
 
     --copilot
     use('github/copilot.vim')
+    
+    --comment (auto commenting plugin)
+    use {
+        'numToStr/Comment.nvim',
+         requires = {
+             'JoosepAlviste/nvim-ts-context-commentstring',
+             'nvim-treesitter/nvim-treesitter'
+         }
+    }
+   
+
 end)
