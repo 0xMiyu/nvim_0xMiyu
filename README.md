@@ -12,7 +12,7 @@ Plugin List:
 
 ```bash
 Coming Soon!
-
+```
 
 ## To get Neorg Treesitter parset working
 
@@ -21,9 +21,4 @@ brew install gcc
 xcode-select --install
 sudo xcode-select --switch /Library/Developer/CommandLineTools
 CC=gcc-12 nvim -c "TSInstall norg"
-```
-
-```
-```
-
 ```
