@@ -14,7 +14,7 @@ Plugin List:
 Coming Soon!
 ```
 
-## To get Neorg Treesitter parset working
+## To get Neorg Treesitter parser working
 
 ```bash
 brew install gcc
