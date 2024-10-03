@@ -38,10 +38,25 @@ local plugins = {
       end,
     },
 
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+    {
+        "nvim-treesitter/nvim-treesitter", 
+        build = ":TSUpdate",
+        opts = {
+            -- A list of parser names, or "all" (the five listed parsers should always be installed)
+            ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "rust",  "javascript", "typescript", "java", "python" },
+
+            highlight = {
+                enable = true,
+                additional_vim_regex_highlighting = false,
+            },
+        },
+        config = function(_, opts)
+            require("nvim-treesitter.configs").setup(opts)
+        end,
+    },
 
 
-     {
+    {
         'vonheikemen/lsp-zero.nvim',
         branch = 'v2.x',
         dependencies = {
@@ -64,10 +79,10 @@ local plugins = {
 
     --undotree
     'mbbill/undotree',
-    
+
     -- autopair general and html elements
     'windwp/nvim-autopairs',
-     'windwp/nvim-ts-autotag',
+    'windwp/nvim-ts-autotag',
     
     -- code formatter
     'neovim/nvim-lspconfig',
@@ -176,6 +191,24 @@ local plugins = {
              'JoosepAlviste/nvim-ts-context-commentstring',
              'nvim-treesitter/nvim-treesitter'
          }
+    },
+
+    -- neorg with treesitter patch
+    {
+        'nvim-neorg/neorg',
+        lazy = false,
+        version = '*',
+        config = function()
+            require("neorg").setup {
+                load = {
+                    ["core.defaults"] = {},
+                    ["core.concealer"] = {},
+                },
+            }
+
+            vim.wo.foldlevel = 99
+            vim.wo.conceallevel = 2
+        end,
     },
 
 }

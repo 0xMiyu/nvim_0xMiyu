@@ -1,4 +1,4 @@
-## Miyu's Noobish Neovim Setup
+## Miyu's Neovim Setup
 
 My first attempt at customizing my own nvim setup, after multiple failed attempts at trying to switch to out-of-the-box solutions eg. Astro Nvim.
 
@@ -12,4 +12,18 @@ Plugin List:
 
 ```bash
 Coming Soon!
+
+
+## To get Neorg Treesitter parset working
+
+```bash
+brew install gcc
+xcode-select --install
+sudo xcode-select --switch /Library/Developer/CommandLineTools
+CC=gcc-12 nvim -c "TSInstall norg"
+```
+
+```
+```
+
 ```
