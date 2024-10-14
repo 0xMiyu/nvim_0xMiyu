@@ -233,6 +233,9 @@ local plugins = {
                    suffix_last = 'l', -- Suffix to search with "prev" method
                    suffix_next = 'n', -- Suffix to search with "next" method
                },
+
+               -- Number of lines within which surrounding is searched
+               n_lines = 100,
            }
        end,
    }
