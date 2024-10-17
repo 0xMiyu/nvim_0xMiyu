@@ -13,6 +13,9 @@ return {
 			-- set termguicolors to enable highlight groups
 			vim.opt.termguicolors = true
 
+			--toggle nvimtree
+			vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
 			require("nvim-tree").setup({
 
 				sort_by = "case_sensitive",
@@ -21,6 +24,12 @@ return {
 				},
 				filters = {
 					dotfiles = true,
+				},
+				-- Automatically close the tree when opening a file
+				actions = {
+					open_file = {
+						quit_on_open = true,
+					},
 				},
 			})
 		end,
