@@ -36,6 +36,16 @@ return {
 
 			local lspconfig = require("lspconfig")
 
+			-- Define an `on_attach` function to set LSP-related keymaps
+			local on_attach = function(client, bufnr)
+				local bufopts = { noremap = true, silent = true, buffer = bufnr }
+				-- Go to definition
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+				-- Go to declaration
+				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
+				-- Add more LSP keymaps as needed
+			end
+
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 				settings = {
@@ -62,6 +72,7 @@ return {
 
 			lspconfig.ts_ls.setup({
 				capabilties = capabilities,
+				on_attach = on_attach,
 				filetypes = {
 					"javascript",
 					"javascriptreact",
